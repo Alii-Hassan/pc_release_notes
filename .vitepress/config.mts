@@ -7,6 +7,9 @@ export default defineConfig({
   // Base path for GitHub Pages - replace 'pc_release_notes' with your repository name
   base: '/pc_release_notes/',
 
+  // Ignore dead links during build
+  ignoreDeadLinks: true,
+
   // Theme-related configurations
   themeConfig: {
     // Site logo

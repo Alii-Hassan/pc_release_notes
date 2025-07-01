@@ -4,22 +4,18 @@ export default defineConfig({
   title: 'PowerCampus Release Notes',
   description: 'Comprehensive documentation for PowerCampus upgrades from version 9.1.1 to 9.3.0',
 
- // Add this head configuration
+  // Base path for GitHub Pages - replace 'pc_release_notes' with your repository name
+  base: '/pc_release_notes/',
+
+  // Add Zoho SalesIQ Chat Widget
   head: [
-    // Zoho SalesIQ Chat Widget
-    ['script', {}, `
-      window.$zoho=window.$zoho || {};
-      $zoho.salesiq=$zoho.salesiq||{ready:function(){}};
-    `],
+    ['script', {}, `window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}`],
     ['script', { 
       id: 'zsiqscript',
       src: 'https://salesiq.zohopublic.com/widget?wc=siq76c85a1b0774de56d1ee2e000335c7f9',
       defer: true 
     }]
   ],
-
-  // Base path for GitHub Pages - replace 'pc_release_notes' with your repository name
-  base: '/pc_release_notes/',
 
   // Ignore dead links during build
   ignoreDeadLinks: true,
